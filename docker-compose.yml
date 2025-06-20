@@ -33,14 +33,17 @@ services:
       - ./data/redis:/data
   be1:
     container_name: be1
-    build: ./BE_1
+    build: 
+      context: ./BE_1
+      args:
+        NODE_ENV: production
     ports:
       - "8081:8081"
     volumes:
       - ./BE2:/app
     environment:
       - PORT=8082
-      - MONGO_URI = mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
+      - MONGO_URI=mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
       - REDIS_URI=redis://redis:6379
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     depends_on:
@@ -49,14 +52,17 @@ services:
       - kafka
   be2:
     container_name: be2
-    build: ./BE_2
+    build: 
+      context: ./BE_2
+      args:
+        NODE_ENV: production
     ports:
       - "8082:8082"
     volumes:
       - ./BE2:/app
     environment:
       - PORT=8082
-      - MONGO_URI = mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
+      - MONGO_URI=mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
       - REDIS_URI=redis://redis:6379
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     depends_on:

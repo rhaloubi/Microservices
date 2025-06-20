@@ -1,3 +1,5 @@
 /BE_1/node_modules
 /BE_1/.env
 
+.env
+.DS_Store
