@@ -1,0 +1,7 @@
+• Framework: ExpressJs
+• API: restapi
+• Database: MongoDB and mysql
+• Cache: Redis for cache management (e.g., sessions, frequent queries)
+• Message Broker: Kafka for asynchronous communication between microservices
+• Authentication: Implementation (JWT recommended)
+• Architecture: Microservices (at least 3 distinct services, e.g., authentication, user management, main features of the chosen topic) 
