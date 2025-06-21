@@ -44,8 +44,8 @@ services:
     volumes:
       - ./BE_1:/app
     environment:
-      - PORT=8082
-      - MONGO_URI=mongodb://mongodb:27017/ccang
+      - PORT=8081
+      - MONGO_URI=mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
       - REDIS_URI=redis://redis:6379
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     depends_on:
@@ -64,7 +64,7 @@ services:
       - ./BE_2:/app
     environment:
       - PORT=8082
-      - MONGO_URI=mongodb://mongodb:27017/ccang
+      - MONGO_URI=mongodb+srv://redahaloubi8:Reda2001@ccang.of74yrg.mongodb.net/
       - REDIS_URI=redis://redis:6379
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     depends_on:
