@@ -27,5 +27,5 @@ const setupKafkaConsumer = () => {
     console.error('Kafka consumer error:', err);
   });
 };
-
-module.exports = { setupKafkaConsumer };
+  
+module.exports = { setupKafkaConsumer }; // Can be safely removed

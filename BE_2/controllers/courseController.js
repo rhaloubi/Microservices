@@ -8,7 +8,7 @@ exports.createCourse = async (req, res) => {
 
     // Get teacher details via Kafka
     const teacherData = await getTeacherByName(teacherName);
-
+    // Remove Kafka message sending for teacher lookup
     if (!teacherData || !teacherData._id) {
       return res.status(404).json({ message: 'Teacher not found' });
     }
